@@ -12,7 +12,7 @@ export const uploadImage = async (request, response) => {
     
     try {
         const file = await File.create(fileObj);
-        response.status(200).json({ path:  `https://ill-jade-bonobo-tux.cyclic.app/file/${file._id}`});
+        response.status(200).json({ path: `https://ill-jade-bonobo-tux.cyclic.app//file/${file._id}`});
     } catch (error) {
         console.error(error.message);
         response.status(500).json({ error: error.message });
@@ -23,7 +23,7 @@ export const getImage = async (request, response) => {
     try {   
         const file = await File.findById(request.params.fileId);
         
-        file.downloadCount++;
+        file.downloadContent++;
 
         await file.save();
 
