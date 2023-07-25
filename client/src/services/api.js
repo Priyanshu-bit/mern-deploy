@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API_URI="https://ill-jade-bonobo-tux.cyclic.app/"
+const API_URI="https://ill-jade-bonobo-tux.cyclic.app"
 export const uploadFile = async (data) => {
     try {
         const response = await axios.post(`${API_URI}/upload`, data);
